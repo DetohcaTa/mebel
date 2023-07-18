@@ -1,0 +1,63 @@
+.footer{
+    background-color: $bg;
+    &__content{
+        padding-top: 118px;
+        width: 1064px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left{
+        width: 29%;
+    }
+    &__logo {
+        width: 78px;
+        height: 35px;
+        margin-bottom: 29px;
+    }
+    &__text{
+        @include font(500, 15px, $black, 160%);
+        padding-bottom:130px;
+    }
+    &__bottom{
+        @include font(400, 17px, $grey,);
+    }
+
+    &__orange{
+        @include font(400, 17px, $orange);
+        width: 136px;
+        text-align: start;
+        padding-bottom: 20px;
+   }
+      &__tb {
+        padding-bottom: 94px;
+        th:not(:last-child),td:not(:last-child){
+            padding-right: 110px;
+        }
+        td:first-child {
+          
+            width: 246px;
+        }
+        td {
+            @include font(500, 15px, $black,160%);
+            width: 136px;
+            padding-bottom: 16px;
+        }
+        svg{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+     
+      }  
+      &__spi{
+        @include font(500, 15px, $black,160%);
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 56px;
+        &__marg{
+            margin-right: 40px;
+        }
+      }
+    
+}

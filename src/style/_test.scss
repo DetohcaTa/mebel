@@ -1,0 +1,113 @@
+.test {
+    &__content {
+       padding-bottom: 214px;
+        &_top {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__subHeader {
+        text-align: center;
+        @include font(600, 18px, $orange);
+        text-transform: uppercase;
+        letter-spacing: 3.15px;
+        margin-bottom: 20px;
+    }
+
+    &__header {
+        text-transform: capitalize;
+        @include font(700, 42px, $black, 130%);
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    &__swiper {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    &__slide {
+        border-radius: 18px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        flex-basis: 31.2%;
+        min-height: 476px;
+        display: flex;
+        align-items: flex-end;
+        padding: 18px;
+        &_1 {
+            background-image: url(./images/test/test-1.png);
+        }
+        &_2 {
+            background-image: url(./images/test/test-2.png);
+        }
+        &_3 {
+            background-image: url(./images/test/test-3.png);
+        }
+        &_content {
+            background-image: url(./images/test/test-bg.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            min-height: 240px;
+            padding: 8px 40px 17px 40px;
+            border-bottom-right-radius: 18px;
+            border-bottom-left-radius: 18px;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 13px;
+                box-shadow: 0px 5px 15px lightgray;
+                border-radius: 50%
+                
+            }
+
+           
+        }
+
+    }
+
+    &__nameHeader {
+        @include font(700, 18px);
+        text-transform: capitalize;
+        margin-bottom: 6px;
+    }
+    &__desc {
+        @include font(400, 12px);
+        opacity: 0.6;
+        margin-bottom: 22px;
+    }
+    &__comment {
+        @include font(400, 14px);
+        opacity: 0.8;
+        text-align: center;
+        max-height: 100px;
+        overflow: auto;
+    }
+
+    &__stars {
+        margin-bottom: 0;
+        display: flex;
+       
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &__star:last-child {
+        opacity: 0.5;
+    }
+    &__arrow {
+        top: 36%;
+    }
+}

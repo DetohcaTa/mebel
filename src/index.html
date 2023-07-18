@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./resources/normalize.css">
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="main.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="app.js"></script>
+    
+
+</head>
+<body>
+    <div style="display: none;">
+        <svg viewBox="0 0 48 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>:root>svg{display:none}:root>svg:target{display:block}</style><svg fill="none" viewBox="0 0 28 28" id="arrow" xmlns="http://www.w3.org/2000/svg"><path d="M22.696 14.435H5.486m0 0s4.878-3.208 5.87-5.87m-5.87 5.87s4.312 3.015 5.87 5.87" stroke="#1E1E1E" stroke-width="2.174" stroke-linecap="square"/></svg><svg fill="none" viewBox="0 0 48 24" id="arrow-more" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 12.4H42m0 0S37.512 9.45 36.6 7m5.4 5.4s-3.968 2.774-5.4 5.4" stroke="#E58411" stroke-linecap="square"/></svg><svg fill="none" viewBox="0 0 34 34" id="bag" xmlns="http://www.w3.org/2000/svg"><path d="M17.007 2.833c3.797 0 6.918 2.984 7.076 6.764h-.037a.71.71 0 0 1-.061.32h.22c1.725 0 3.53 1.195 4.254 4.08l.079.34 1.09 8.776c.783 5.597-2.28 7.95-6.457 8.05l-.28.004H11.147c-4.245 0-7.517-1.547-6.797-7.674l.049-.38L5.5 14.337c.544-3.107 2.368-4.332 4.125-4.416l.195-.004h.11a.92.92 0 0 1 0-.32c.16-3.78 3.28-6.764 7.077-6.764Zm-4.12 11.8c-.691 0-1.252.577-1.252 1.289 0 .711.56 1.288 1.252 1.288s1.252-.577 1.252-1.288l-.01-.162c-.077-.635-.603-1.127-1.242-1.127Zm8.201 0c-.691 0-1.252.577-1.252 1.289 0 .711.56 1.288 1.252 1.288s1.252-.577 1.252-1.288c0-.712-.56-1.289-1.252-1.289Zm-4.137-9.955c-2.725 0-4.935 2.202-4.935 4.919a.918.918 0 0 1 0 .32h9.933a.92.92 0 0 1-.062-.32c0-2.717-2.21-4.919-4.936-4.919Z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 18 21" id="check" xmlns="http://www.w3.org/2000/svg"><g filter="url(#da)"><path d="M12.341 5.591a.844.844 0 0 1 1.204 1.182l-4.489 5.613a.846.846 0 0 1-1.215.023L4.864 9.432A.844.844 0 1 1 6.057 8.24l2.355 2.354 3.908-4.978a.32.32 0 0 1 .022-.025h-.001Z" fill="#fff"/></g><defs><filter id="da" x="-4" y="0" width="26" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1_49"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_1_49" result="shape"/></filter></defs></svg><svg fill="none" viewBox="0 0 10 20" id="facebook" xmlns="http://www.w3.org/2000/svg"><path d="M8.15 3.295H9.96V.14A23.394 23.394 0 0 0 7.322 0C4.71 0 2.921 1.643 2.921 4.663v2.779H.038v3.527h2.883v8.876h3.534V10.97H9.22l.439-3.527H6.454v-2.43c0-1.02.275-1.718 1.696-1.718Z" fill="#1E2833"/></svg><svg fill="none" viewBox="0 0 18 18" id="find" xmlns="http://www.w3.org/2000/svg"><path d="m15.75 15.75-3.364-3.37m1.864-4.505a6.375 6.375 0 1 1-12.75 0 6.375 6.375 0 0 1 12.75 0Z" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><svg fill="none" viewBox="0 0 20 20" id="instagram" xmlns="http://www.w3.org/2000/svg"><g fill="#1E2833"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 0h7.5A6.25 6.25 0 0 1 20 6.25v7.5A6.25 6.25 0 0 1 13.75 20h-7.5A6.25 6.25 0 0 1 0 13.75v-7.5A6.25 6.25 0 0 1 6.25 0Zm7.5 18.125a4.38 4.38 0 0 0 4.375-4.375v-7.5a4.38 4.38 0 0 0-4.375-4.375h-7.5A4.38 4.38 0 0 0 1.875 6.25v7.5a4.38 4.38 0 0 0 4.375 4.375h7.5Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5 10a5 5 0 1 1 10 0 5 5 0 0 1-10 0Zm1.875 0A3.13 3.13 0 0 0 10 13.125 3.13 3.13 0 0 0 13.125 10 3.129 3.129 0 0 0 10 6.875 3.129 3.129 0 0 0 6.875 10Z"/><circle cx="15.375" cy="4.625" r=".666"/></g></svg><svg fill="none" viewBox="0 0 25 25" id="plus" xmlns="http://www.w3.org/2000/svg"><path d="M22.134 12.21c0-.769-.623-1.392-1.393-1.392h-6.963V3.854a1.393 1.393 0 1 0-2.785 0v6.964H4.03a1.393 1.393 0 1 0 0 2.785h6.963v6.963a1.393 1.393 0 0 0 2.785 0v-6.963h6.963c.77 0 1.393-.624 1.393-1.393Z" fill="#fff"/></svg><svg fill="none" viewBox="0 0 19 19" id="star" xmlns="http://www.w3.org/2000/svg"><path d="M13.973 10.908a.838.838 0 0 0-.243.739l.677 3.747a.822.822 0 0 1-.343.823.838.838 0 0 1-.891.06L9.8 14.518a.86.86 0 0 0-.381-.1h-.206a.618.618 0 0 0-.206.069l-3.374 1.768c-.167.084-.356.113-.54.084a.847.847 0 0 1-.679-.968l.678-3.748a.852.852 0 0 0-.243-.745L2.1 8.212a.822.822 0 0 1-.205-.86.855.855 0 0 1 .677-.572l3.786-.549a.847.847 0 0 0 .67-.464l1.668-3.42a.793.793 0 0 1 .152-.205l.069-.053a.511.511 0 0 1 .122-.1l.083-.03.13-.053h.32c.287.03.539.2.67.457l1.69 3.404a.846.846 0 0 0 .633.464l3.785.55c.32.045.587.266.693.57.1.306.014.64-.22.861l-2.85 2.696Z" fill="#F6B76F"/></svg><svg fill="none" viewBox="0 0 20 16" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M19.556 1.881a8.36 8.36 0 0 1-2.31.633A3.986 3.986 0 0 0 19.009.298a8.012 8.012 0 0 1-2.542.97A4.008 4.008 0 0 0 9.532 4.01c0 .319.027.624.093.915A11.348 11.348 0 0 1 1.362.731a4.036 4.036 0 0 0-.55 2.026c0 1.389.716 2.62 1.782 3.332a3.96 3.96 0 0 1-1.812-.494v.044a4.028 4.028 0 0 0 3.212 3.94c-.326.089-.682.132-1.05.132-.258 0-.517-.015-.76-.069.52 1.588 1.994 2.755 3.746 2.793a8.055 8.055 0 0 1-4.97 1.71c-.33 0-.645-.015-.96-.055a11.287 11.287 0 0 0 6.15 1.799c7.378 0 11.41-6.111 11.41-11.408 0-.178-.005-.349-.014-.519a7.999 7.999 0 0 0 2.01-2.081Z" fill="#1E2833"/></svg></svg>
+    </div>
+    <header class="header">
+        <div class="container">
+           <div class="header__content">
+            <img src="./images/logo.svg" alt="logo" class="header__logo">
+            <nav class="header__nav">
+                <div class="header__dropMenu">
+                    <span class="header__menu">Furniture</span>
+                    <ul class="header__dpopMenu_drop">
+                        <li class="header__item">Блок</li>
+                        <li class="header__item">Блок</li>
+                        <li class="header__item">Блок</li>
+                    </ul>
+                </div>
+                <a href="#Shop" class="header__link">Shop</a>
+                <a href="#About" class="header__link">About Us</a>
+                <a href="#Contact" class="header__link">Contact</a>
+            </nav>
+            <button class="header__bag">
+                <svg>
+                    <use xlink:href="#bag"></use>
+                </svg>
+                <span class="header__count">
+                    0
+                </span>
+            </button>
+           </div>           
+        </div>
+    </header>
+    <section class="hero">
+        <img src="./images/hero-1.png" alt="hero" class="hero__back">
+        <div class="container hero__content">
+            <div class="hero__box">
+                <h1 class="hero__header">
+                    Make your interior more minimalistic & modern
+                </h1>
+                <p class="hero__text">
+                    Turn your room with panto into a lot more minimalist and modern with ease and speed
+                </p>
+                <form action="/" class="hero__form">
+                    <input type="text" class="hero__input" placeholder="Search furniture">
+                    <button type="submit" class="hero__btn">
+                        <svg class="hero__find">
+                            <use xlink:href="#find"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <button class="hero__popUp hero__popUp_1">
+            <span class="hero__circle">
+                
+                <div class="hero__popUp_drop">
+                    <label for="vaza1"  class="hero__popUp_label-1 label hero__popUp_check">          
+                        <input type="radio" name="vaza" id="vaza1" class="formInput">
+                    </label>
+                    <label for="vaza2"  class="hero__popUp_label-2 label">         
+                        <input type="radio" name="vaza" id="vaza2" class="formInput">
+                    </label>
+                    <label for="vaza3"  class="hero__popUp_label-3 label">
+                        <input type="radio" name="vaza" id="vaza3" class="formInput">
+                    </label>
+                </div>
+            </span>
+        </button>
+        <button class="hero__popUp hero__popUp_2">
+            <span class="hero__circle">
+                <div class="hero__popUp_drop">
+                    <label for="divan1"  class="hero__popUp_label-1 label">
+
+                        <input type="radio" name="divan" id="divan1" class="formInput">
+                    </label>
+                    <label for="divan2"  class="hero__popUp_label-2 label">
+
+                        <input type="radio" name="divan" id="divan2" class="formInput">
+                    </label>
+                    <label for="divan3"  class="hero__popUp_label-3 label">
+
+                        <input type="radio" name="divan" id="divan3" class="formInput">
+                    </label>
+                </div>
+            </span>
+        </button>
+        <button class="hero__popUp hero__popUp_3">
+            <span class="hero__circle">
+                <div class="hero__popUp_drop"><label for="stol1"  class="hero__popUp_label-1 label">
+
+                    <input type="radio" name="stol" id="stol1" class="formInput">
+                </label>
+                <label for="stol2"  class="hero__popUp_label-2 label">
+
+                    <input type="radio" name="stol" id="stol2" class="formInput">
+                </label>
+                <label for="stol3"  class="hero__popUp_label-3 label">
+
+                    <input type="radio" name="stol" id="stol3" class="formInput">
+                </label>
+                </div>
+            </span>
+        </button>
+        <button class="hero__popUp hero__popUp_4">
+            <span class="hero__circle">
+                <div class="hero__popUp_drop">
+                    <label for="kust1"  class="hero__popUp_label-1 label">
+                        <input type="radio" name="kust" id="kust1" class="formInput">
+
+                    </label>
+                    <label for="kust2"  class="hero__popUp_label-2 label">
+
+                        <input type="radio" name="kust" id="kust2" class="formInput">
+                    </label>
+                    <label for="kust3"  class="hero__popUp_label-3 label">
+
+                        <input type="radio" name="kust" id="kust3" class="formInput">
+                    </label>
+                </div>
+            </span>
+        </button>
+    </section>
+    <section class="why">
+        <div class="container">
+            <div class="why__content">
+                <h2 class="why__header">Why Choosing&nbsp;Us</h2>
+                <ul class="why__list">
+                    <li class="why__item">
+                        <h3 class="why subHeader">Luxury facilities</h3>
+                        <p class="why__text">The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</p>
+                        <a href="" class="why__link">
+                            More Info
+                            <svg>
+                                <use xlink:href="#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="why__item">
+                        <h3 class="why subHeader">Affordable Price</h3>
+                        <p class="why__text">You can get a workspace of the highst quality at an affordable price and still enjoy the facilities that are oly here.</p>
+                        <a href="" class="why__link">
+                            More Info
+                            <svg>
+                                <use xlink:href="#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="why__item">
+                        <h3 class="why subHeader">Many Choices</h3>
+                        <p class="why__text">We provide many unique work space choices so that you can choose the workspace to your liking.</p>
+                        <a href="" class="why__link">
+                            More Info
+                            <svg>
+                                <use xlink:href="#arrow-more"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="produkt">
+        <div class="container">
+            <div class="produkt__content">
+                   <h2 class="produkt__header">Best Selling Product</h2>
+                   <ul class="produkt__spi">
+                          <li><button class="produkt__next">Chair</button></li>
+                          <li><button class="produkt__next">Beds</button></li>
+                          <li><button class="produkt__next">Sofa</button></li>
+                          <li><button class="produkt__next">Lamp</button></li>
+                   </ul>
+                  <div class="swiper produkt__swiper " id="swiper2">
+        
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="produkt__cart">
+                            <img src="./images/produkt/art1.png" class="produkt__cart__chair" alt="stul">
+                            <div class="produkt__text">
+                                <span>Chair</span>
+                                <h4 class="produkt__text_h4">Sakarias Armchair</h4>
+                                <div>
+                                    <svg class="produkt__star">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="produkt__star">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="produkt__star">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="produkt__star">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                                    <svg class="produkt__star">
+                                        <use xlink:href="#star"></use>
+                                    </svg>
+                    
+                                </div>
+                            </div>
+                            <div class="produkt__slide__bottom">
+                                    <span>
+                                      $392
+                                   </span> 
+                                   <div class="produkt__slidePlus">
+                                       <svg class="produkt__plus">
+                                        <use xlink:href="#plus"></use>
+                                       </svg>
+                                   </div>
+                    
+                            </div>
+                        </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="produkt__cart">
+                        <img src="./images/produkt/art2.png" class="produkt__cart__chair" alt="stul">
+                        <div class="produkt__text">
+                            <span>Chair</span>
+                            <h4 class="produkt__text_h4">Baltsar Chair</h4>
+                            <div>
+                                <svg class="produkt__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="produkt__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="produkt__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="produkt__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="produkt__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                
+                            </div>
+                        </div>
+                        <div class="produkt__slide__bottom">
+                                <span>
+                                  $299
+                               </span> 
+                               <div class="produkt__slidePlus">
+                                   <svg class="produkt__plus">
+                                    <use xlink:href="#plus"></use>
+                                   </svg>
+                               </div>
+                
+                        </div>
+                    </div>
+
+            </div>
+            <div class="swiper-slide">
+                <div class="produkt__cart">
+                    <img src="./images/produkt/art3.png" class="produkt__cart__chair" alt="stul">
+                    <div class="produkt__text">
+                        <span>Chair</span>
+                        <h4 class="produkt__text_h4">Anjay Chair</h4>
+                        <div>
+                            <svg class="produkt__star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="produkt__star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="produkt__star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="produkt__star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+                            <svg class="produkt__star">
+                                <use xlink:href="#star"></use>
+                            </svg>
+            
+                        </div>
+                    </div>
+                    <div class="produkt__slide__bottom">
+                            <span>
+                              $519
+                           </span> 
+                           <div class="produkt__slidePlus">
+                               <svg class="produkt__plus">
+                                <use xlink:href="#plus"></use>
+                               </svg>
+                           </div>
+            
+                    </div>
+                </div>
+
+        </div>
+        <div class="swiper-slide">
+            <div class="produkt__cart">
+                <img src="./images/produkt/art4.png" class="produkt__cart__chair" alt="stul">
+                <div class="produkt__text">
+                    <span>Chair</span>
+                    <h4 class="produkt__text_h4">Nyantuy Chair</h4>
+                    <div>
+                        <svg class="produkt__star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="produkt__star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="produkt__star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="produkt__star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                        <svg class="produkt__star">
+                            <use xlink:href="#star"></use>
+                        </svg>
+        
+                    </div>
+                </div>
+                <div class="produkt__slide__bottom">
+                        <span>
+                          $921
+                       </span> 
+                       <div class="produkt__slidePlus">
+                           <svg class="produkt__plus">
+                            <use xlink:href="#plus"></use>
+                           </svg>
+                       </div>
+        
+                </div>
+            </div>
+
+    </div>
+    <div class="swiper-slide">
+        <div class="produkt__cart">
+            <img src="./images/produkt/art1.png" class="produkt__cart__chair" alt="stul">
+            <div class="produkt__text">
+                <span>Chair</span>
+                <h4 class="produkt__text_h4">Sakarias Armchair</h4>
+                <div>
+                    <svg class="produkt__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="produkt__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="produkt__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="produkt__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+                    <svg class="produkt__star">
+                        <use xlink:href="#star"></use>
+                    </svg>
+    
+                </div>
+            </div>
+            <div class="produkt__slide__bottom">
+                    <span>
+                      $392
+                   </span> 
+                   <div class="produkt__slidePlus">
+                       <svg class="produkt__plus">
+                        <use xlink:href="#plus"></use>
+                       </svg>
+                   </div>
+    
+            </div>
+        </div>
+
+</div>
+<div class="swiper-slide">
+    <div class="produkt__cart">
+        <img src="./images/produkt/art2.png" class="produkt__cart__chair" alt="stul">
+        <div class="produkt__text">
+            <span>Chair</span>
+            <h4 class="produkt__text_h4">Baltsar Chair</h4>
+            <div>
+                <svg class="produkt__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="produkt__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="produkt__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="produkt__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="produkt__star">
+                    <use xlink:href="#star"></use>
+                </svg>
+
+            </div>
+        </div>
+        <div class="produkt__slide__bottom">
+                <span>
+                  $299
+               </span> 
+               <div class="produkt__slidePlus">
+                   <svg class="produkt__plus">
+                    <use xlink:href="#plus"></use>
+                   </svg>
+               </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="swiper-slide">
+<div class="produkt__cart">
+    <img src="./images/produkt/art3.png" class="produkt__cart__chair" alt="stul">
+    <div class="produkt__text">
+        <span>Chair</span>
+        <h4 class="produkt__text_h4">Anjay Chair</h4>
+        <div>
+            <svg class="produkt__star">
+                <use xlink:href="#star"></use>
+            </svg>
+            <svg class="produkt__star">
+                <use xlink:href="#star"></use>
+            </svg>
+            <svg class="produkt__star">
+                <use xlink:href="#star"></use>
+            </svg>
+            <svg class="produkt__star">
+                <use xlink:href="#star"></use>
+            </svg>
+            <svg class="produkt__star">
+                <use xlink:href="#star"></use>
+            </svg>
+
+        </div>
+    </div>
+    <div class="produkt__slide__bottom">
+            <span>
+              $519
+           </span> 
+           <div class="produkt__slidePlus">
+               <svg class="produkt__plus">
+                <use xlink:href="#plus"></use>
+               </svg>
+           </div>
+
+    </div>
+</div>
+
+</div>
+<div class="swiper-slide">
+<div class="produkt__cart">
+<img src="./images/produkt/art4.png" class="produkt__cart__chair" alt="stul">
+<div class="produkt__text">
+    <span>Chair</span>
+    <h4 class="produkt__text_h4">Nyantuy Chair</h4>
+    <div>
+        <svg class="produkt__star">
+            <use xlink:href="#star"></use>
+        </svg>
+        <svg class="produkt__star">
+            <use xlink:href="#star"></use>
+        </svg>
+        <svg class="produkt__star">
+            <use xlink:href="#star"></use>
+        </svg>
+        <svg class="produkt__star">
+            <use xlink:href="#star"></use>
+        </svg>
+        <svg class="produkt__star">
+            <use xlink:href="#star"></use>
+        </svg>
+
+    </div>
+</div>
+<div class="produkt__slide__bottom">
+        <span>
+          $921
+       </span> 
+       <div class="produkt__slidePlus">
+           <svg class="produkt__plus">
+            <use xlink:href="#plus"></use>
+           </svg>
+       </div>
+
+</div>
+</div>
+
+</div>
+
+            </div>  
+            <div class="swiper-button-next produkt__nav produkt__nav_ar">
+                <svg class="">
+                <use xlink:href="#arrow"></use>
+                 </svg>
+             </div>
+            <div class="swiper-button-prev produkt__nav">
+            <svg class="">
+                <use xlink:href="#arrow"></use>
+                 </svg>
+            </div>        
+                  </div>
+                  <a href="" class="produkt__link">
+                    View All
+                    <svg>
+                        <use xlink:href="#arrow-more"></use>
+                    </svg>
+                </a>
+                
+
+
+          </div>
+
+        </div>
+    </section>
+    <section class="exp">
+        <div class="exp__content">
+            <div class="exp__left">
+                <img src="./images/exp.png" alt="exp" class="exp__img">
+                <div class="exp__img_blur"></div>
+            </div>
+            <div class="exp__right">
+                <h3 class="exp__subHeader">experiences</h3>
+                <h2 class="exp__header">we provide you the best&nbsp;experience</h2>
+                <p class="exp__text">
+                    You don’t have to worry about the result because all of these interiors are made by people who are professionals in their fields with an elegant and lucurious style and with premium quality materials
+                </p>
+                <a href="" class="why__link">
+                    More Info
+                    <svg>
+                        <use xlink:href="#arrow-more"></use>
+                    </svg>
+                </a>
+               
+            </div>
+        </div>
+    </section>
+    <section class="materials">
+        <div class="materials__content">
+            <div class="materials__left">
+                <h3 class="exp__subHeader">Materials</h3>
+                <h2 class="exp__header">Very serious materials&nbsp;for making furniture</h2>
+                <p class="exp__text">
+                    Because panto was very serious about designing furniture for our environment, using a very expensive and famous capital but at a relatively low price
+                </p>
+                <a href="" class="why__link">
+                    More Info
+                    <svg>
+                        <use xlink:href="#arrow-more"></use>
+                    </svg>
+                </a>
+               
+            </div>
+            <div class="materials__right">
+                <div class="materials__eff">
+                    <img src="./images/materials/very1.png" alt="mebel" class="materials__elem1">
+
+                </div>
+                <div class="materials__eff">
+                    <img src="./images/materials/very2.png" alt="mebel" class="materials__elem2">
+                </div>
+                
+                <img src="./images/materials/very.png" alt="mebel" class="materials__elem3">
+                
+            </div>
+
+        </div>
+
+    </section>
+    <section class="test">
+        <div class="container">
+            <div class="test__content">
+                <h3 class="test__subHeader">Testimonials</h3>
+                <h2 class="test__header">Our Client Reviews</h2>
+                <div class="test__swiper ">
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev product__arrow_prev test__arrow"></div>
+                    <div class="swiper-button-next product__arrow_next test__arrow"></div>
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper test__wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide test__slide test__slide_1">
+                        <div class="test__slide_content">
+                            <div class="test__content_top">
+                                <img src="./images/test/test-photo-1.png" alt="photo" class="test__img">
+                                <h4 class="test__nameHeader">
+                                    Bang Upin
+                                </h4>
+                                <span class="test__desc">
+                                    Pedagang Asongan
+                                </span>
+                                <p class="test__comment">
+                                    “Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal“
+                                </p>
+                            </div>
+                            <div class="test__stars">
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star ">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+                      </div>
+                      <div class="swiper-slide test__slide test__slide_2">
+                        <div class="test__slide_content">
+                           <div class="test__content_top">
+                                <img src="./images/test/test-photo-2.png" alt="photo" class="test__img">
+                                <h4 class="test__nameHeader">
+                                    Ibuk Sukijan
+                                </h4>
+                                <span class="test__desc">
+                                    Ibu Rumah Tangga
+                                </span>
+                                <p class="test__comment">
+                                    “Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah“
+                                    
+                                </p>
+                           </div>
+                            <div class="test__stars">
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+                      </div>
+                      <div class="swiper-slide test__slide test__slide_3">
+                        <div class="test__slide_content">
+                          <div class="test__content_top">
+                                <img src="./images/test/test-photo-3.png" alt="photo" class="test__img">
+                                <h4 class="test__nameHeader">
+                                    Mpok Ina
+                                </h4>
+                                <span class="test__desc">
+                                    Karyawan Swasta
+                                </span>
+                                <p class="test__comment">
+                                    “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+                                </p>
+                          </div>
+                            <div class="test__stars">
+                                <svg class="product__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+                      </div>
+                      <div class="swiper-slide test__slide test__slide_3">
+                        <div class="test__slide_content">
+                            <div class="test__content_top">
+                                <img src="./images/test/test-photo-3.png" alt="photo" class="test__img">
+                                <h4 class="test__nameHeader">
+                                    Mpok Ina
+                                </h4>
+                                <span class="test__desc">
+                                    Karyawan Swasta
+                                </span>
+                                <p class="test__comment">
+                                    “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+                                </p>
+                            </div>
+                            <div class="test__stars">
+                                <svg class="product__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+                      </div>
+                      <div class="swiper-slide test__slide test__slide_3">
+                        <div class="test__slide_content">
+                            <div class="test__content_top test__arrow">
+                                <img src="./images/test/test-photo-3.png" alt="photo" class="test__img">
+                                <h4 class="test__nameHeader">
+                                    Mpok Ina
+                                </h4>
+                                <span class="test__desc">
+                                    Karyawan Swasta
+                                </span>
+                                <p class="test__comment">
+                                    “Sangat terjangkau untuk kantong saya yang tidak terlalu banyak“
+                                </p>
+                            </div>
+                            <div class="test__stars">
+                                <svg class="product__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                                <svg class="test__star">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  
+
+                  
+
+                  </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__left">
+                    <img src="./images/logob.svg" alt="logo" class="footer__logo">
+                    <h4 class="footer__text">The advantage of hiring a workspace with us is that givees you comfortable service and all-around facilities.</h4>
+                    <span class="footer__bottom">Copyright © 2021</span>
+                </div>
+                <div class="footer__right">
+                    <table class="footer__tb">
+                        <tr>
+                            <th class="footer__orange">Services</th>
+                            <th class="footer__orange">Furniture</th>
+                            <th class="footer__orange">Follow Us</th>
+                        </tr>
+
+                        <tr>
+                            <td>Email Marketing</td>
+                            <td>Beds</td>
+                            <td>
+                              <svg>
+                                <use xlink:href="#facebook"></use>
+                              </svg>
+                              Facebook
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Campaigns</td>
+                            <td>Chair</td>
+                            <td>
+                              <svg>
+                                <use xlink:href="#twitter"></use>
+                              </svg>
+                              Twitter
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Branding</td>
+                            <td>All</td>
+                            <td>
+                              <svg>
+                                <use xlink:href="#instagram"></use>
+                              </svg>
+                              Instagram
+                            </td>
+                        </tr>
+                    </table>
+                    <ul class="footer__spi">
+                        <li class="footer__spi__marg">Terms & Conditions</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

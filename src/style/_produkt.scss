@@ -1,0 +1,168 @@
+.produkt {
+    background-color: $bg;
+    padding: 50px 0;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    &__header{
+        @include font(700, 42px, $black,);
+        margin-bottom: 38px;
+    }
+    &__spi{
+        display: flex;
+        padding: 6px;
+        border-radius: 44px;
+        background-color: $pale-white;
+        width: 28%;
+        height: 57px;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 86px;
+    }
+    &__next{
+        @include font(400,18px,$black,185%);
+        width: 84px;
+        padding: 4px;
+        border-radius: 32px;
+        border: none;
+        transition: all 0.2s ease-in;
+        &:hover{
+            background-color: $white;
+        }
+    }
+    &__cart{
+        width: 268px;
+        padding: 21px;
+        background-color: $white;
+        border-radius: 20px;
+        &__chair {
+            height: 290px;
+            margin-bottom: 40px;
+            
+        }
+    }
+    &__text{
+        span{
+            @include font(400,17px,$grey);
+            margin-bottom: 7px;
+        }
+        &_h4 {
+            @include font(600,21px,$blue);
+            margin-bottom: 7px;
+        }
+    }
+    &__star{
+        width: 18px;
+        height: 18px;
+        margin-bottom: 47px;
+    }
+    &__swiper{
+        max-width: 1200px;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    &__slide{
+        &__bottom{
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        span {
+            @include font(600,21px,$blue);
+        }
+    }
+
+    }
+    &__plus{
+        width: 24.4px;
+        height: 24.4px;
+    
+    }
+    &__slidePlus{
+        background-color: $blue;
+        width: 49px;
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 31px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font(400, 14px, $orange);
+        width: 45%;
+        svg {
+            width: 48px;
+            height: 24px;
+            transition: all 0.4s ease-in;
+            transform: translateX(5px);
+        }
+        &:hover {
+            svg {
+                transform: translateX(25px);
+            }
+        }
+    }
+    &__arrow {
+
+        &_next {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $white;
+            right: 0px;
+            &::after {
+                content: '';
+                background-image: url(../images/arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 26px;
+                height: 26px;
+                transform: rotate(180deg);
+            }
+        }
+
+        &_prev {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $white;
+            left:0px;
+            &::after {
+                content: '';
+                background-image: url(../images/arrow.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+    &__nav{
+      
+        width: 50px;
+        height: 50px;
+        background-color: $pale-white;
+        border-radius: 50%;
+        box-shadow: 0px 7.03125px 19.53125px 0px rgba(0, 0, 0, 0.06);
+        &_ar{
+            transform: rotate(180deg);
+        }
+        svg {
+            width: 26px;
+            height: 26px;
+        }
+
+    }
+    
+}
+.swiper-button-prev::after ,.swiper-button-next::after {
+    /* background-color: rebeccapurple; */
+    content: '';
+}

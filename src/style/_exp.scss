@@ -1,0 +1,77 @@
+.exp {
+    padding: 120px 0;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-right: 140px;
+    }
+
+    &__left {
+        margin-right: 140px;
+        padding: 60px 0 30px 0;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 60px;
+            border-top-right-radius: 20px;
+            background-color: $bg;
+            top: 0;
+            left: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 60%;
+            width: 60px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: $bg;
+            top: 22%;
+            right: -60px;
+        }
+        
+    }
+    &__img {
+       &_blur {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-image: url(../images/exp.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50px 80px;
+        width: 94%;
+        height: 97%;
+        filter: blur(25px);
+       }
+    }
+
+    &__subHeader {
+        text-transform: uppercase;
+        @include font(600, 18px, $orange);
+        letter-spacing: 3.15px;
+        margin-bottom: 20px;
+    }
+    &__header {
+        text-transform: capitalize;
+        @include font(700, 42px, $black, 130%);
+        margin-bottom: 20px;
+
+    }
+    &__text {
+        @include font(400, 18px, $black, 185%);
+        opacity: 0.8;
+        margin-bottom: 24px;
+
+    }
+
+    &__right {
+        padding-top: 60px;
+    }
+}
